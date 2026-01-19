@@ -8,7 +8,7 @@ Live-coding music environment bridging a Kotlin DSL with SuperCollider via OSC.
 
 Tags: Kotlin, DSL, SuperCollider, OSC, Live Coding
 
-Docs: https://lucienbrule.github.io/riddim
+Docs: https://lucienbrule.github.io/riddim (hub for Development/User/Ops)
 
 ## Build Status
 

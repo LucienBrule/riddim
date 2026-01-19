@@ -19,7 +19,7 @@ dev:
 	./gradlew :modules:app-api:quarkusDev
 
 build-docs:
-	cd docs && npm run docs:build
+	cd docs && npm run docs:bundle
 
 docker-build: build
 	docker build -t riddim-app-api:latest -f deployment/images/app-api/Dockerfile .

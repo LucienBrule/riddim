@@ -1,0 +1,25 @@
+= Getting Started
+
+[NOTE]
+====
+AUDIT_ME: Placeholder instructions. Verify commands and screenshots.
+====
+
+== Quick run
+. Start the API in dev mode:
+[source,bash]
+----
+./gradlew :modules:app-api:quarkusDev
+----
+. Send a sound event:
+[source,bash]
+----
+curl -X POST http://localhost:8080/sound/play \
+  -H "Content-Type: application/json" \
+  -d '{"type": "kick", "parameters": {"gain": 1.0}}'
+----
+
+== Docker run (draft)
+- Build: `make docker-build`
+- Up: `make docker-up`
+- Verify: `make docker-ps` then curl the API on port 8080.

@@ -7,6 +7,12 @@ content:
     - url: ..
       branches: HEAD
       start_path: docs/development
+    - url: ..
+      branches: HEAD
+      start_path: docs/user
+    - url: ..
+      branches: HEAD
+      start_path: docs/ops
 output:
   dir: build/docs-site
 ui:

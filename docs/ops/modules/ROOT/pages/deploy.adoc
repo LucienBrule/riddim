@@ -1,0 +1,19 @@
+= Deploy
+
+[NOTE]
+====
+AUDIT_ME: Deployment steps are draft. Confirm compose and image names.
+====
+
+== Docker Compose
+- Build images: `make docker-build`
+- Start stack: `make docker-up`
+- Check services: `make docker-ps`
+
+== Configuration
+- Engine host: `RIDDIM_ENGINE_SUPERCOLLIDER_HOST` (default `localhost`)
+- Engine port: `RIDDIM_ENGINE_SUPERCOLLIDER_PORT` (default `57120`)
+
+== Health checks (draft)
+- API: `curl http://localhost:8080/q/health`
+- Sound play: POST to `/sound/play` with a test event.

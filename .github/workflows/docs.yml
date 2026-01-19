@@ -25,11 +25,11 @@ jobs:
           cache-dependency-path: docs/package-lock.json
       - name: Install deps
         run: npm ci
-      - name: Build docs
-        run: npm run docs:build
+      - name: Build docs bundle (Antora + Vite shell)
+        run: npm run docs:bundle
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: docs/build/docs-site
+          publish_dir: docs/site/dist
           publish_branch: gh-pages

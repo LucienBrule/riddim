@@ -1,0 +1,3 @@
+* xref:index.adoc[Ops Welcome]
+* xref:deploy.adoc[Deploy]
+* xref:monitoring.adoc[Monitoring]

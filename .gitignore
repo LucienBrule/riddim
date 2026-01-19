@@ -23,6 +23,8 @@ out/
 docs/node_modules/
 docs/build/
 docs/.cache/
+docs/site/node_modules/
+docs/site/dist/
 
 # OS specific
 .DS_Store

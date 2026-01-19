@@ -1,0 +1,11 @@
+= Ops Welcome
+
+[NOTE]
+====
+AUDIT_ME: Placeholder ops content. Validate deployments and metrics.
+====
+
+Operational notes for running riddim in containerized environments.
+
+- xref:deploy.adoc[Deploy]
+- xref:monitoring.adoc[Monitoring]

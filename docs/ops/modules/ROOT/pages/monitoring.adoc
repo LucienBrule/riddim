@@ -1,0 +1,15 @@
+= Monitoring
+
+[NOTE]
+====
+AUDIT_ME: Observability plan needed. Placeholder guidance.
+====
+
+== What to watch
+- API availability (HTTP 200 on `/q/health`).
+- UDP reachability to SuperCollider (port 57120).
+- Scheduler throughput and queue depth (TBD metrics).
+
+== Suggestions
+- Add simple logs for event send status (`Receipt.status`).
+- Use container logs to trace OSC send errors.

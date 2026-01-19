@@ -1,0 +1,11 @@
+= User Welcome
+
+[NOTE]
+====
+AUDIT_ME: Stub user docs. Fill in real guidance after feature validation.
+====
+
+Welcome to the riddim user guides. These pages focus on running the system and triggering sounds without diving into implementation details.
+
+- xref:getting-started.adoc[Getting started]
+- xref:faq.adoc[FAQ]

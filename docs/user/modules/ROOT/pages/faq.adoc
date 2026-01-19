@@ -1,0 +1,18 @@
+= FAQ
+
+[NOTE]
+====
+AUDIT_ME: Placeholder questions. Replace with real user feedback.
+====
+
+== Why don't I hear sound?
+- Ensure SuperCollider is running and listening on the configured host/port.
+- Verify the API returns `status: SENT`.
+- Check firewall rules for UDP 57120.
+
+== How do I lower latency?
+- Run the engine locally (avoid remote UDP paths).
+- Keep the tempo consistent; avoid OS-level power saving.
+
+== Can I schedule sequences?
+- The DSL supports beat-based sequencing; see development docs for `song { ... }` usage.

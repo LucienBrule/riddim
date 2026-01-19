@@ -3,9 +3,15 @@
   "private": true,
   "version": "0.1.0",
   "description": "Antora documentation for riddim",
+  "workspaces": [
+    "site"
+  ],
   "scripts": {
     "docs:build": "antora antora-playbook.yml",
-    "docs:serve": "npm run docs:build && npx serve build/docs-site"
+    "docs:serve": "npm run docs:build && npx serve build/docs-site",
+    "site:dev": "npm run dev -w site",
+    "site:build": "npm run build -w site",
+    "docs:bundle": "npm run docs:build && npm run site:build"
   },
   "devDependencies": {
     "@antora/cli": "3.1.7",
