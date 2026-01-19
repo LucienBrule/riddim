@@ -75,6 +75,8 @@ a:hover {
 
 .footer {
   border-top: 1px solid var(--ctp-border);
+  padding: 8px 0;
+  margin-top: 8px;
 }
 
 /* Callouts */
@@ -133,6 +135,9 @@ pre, code, .literal {
 .toc .toc-list li {
   border-left: 1px solid var(--ctp-border);
   padding-left: 8px;
+}
+.toc .toc-menu h3 {
+  color: var(--ctp-subtext);
 }
 
 /* Left nav hover/active */
