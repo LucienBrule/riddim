@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome :: riddim docs</title>
-    <link rel="canonical" href="https://lucienbrule.github.io/riddim/development/0.1/index.html">
+    <title>FAQ :: riddim docs</title>
+    <link rel="canonical" href="https://lucienbrule.github.io/riddim/user/0.1/faq.html">
     <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../_/css/site.css">
   </head>
@@ -48,33 +48,24 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="development" data-version="0.1">
+<div class="nav-container" data-component="user" data-version="0.1">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
     <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
-    <h3 class="title"><a href="index.html">Development</a></h3>
+    <h3 class="title"><a href="index.html">User Guides</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="index.html">Welcome</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="overview.html">Overview</a>
+    <a class="nav-link" href="getting-started.html">Getting Started</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="onboarding.html">Onboarding</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="modules.html">Modules</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="build-and-run.html">Build and Run</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="assets-and-artifacts.html">Assets and Artifacts</a>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="faq.html">FAQ</a>
   </li>
 </ul>
   </li>
@@ -83,12 +74,28 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Development</span>
+    <span class="title">User Guides</span>
     <span class="version">0.1</span>
   </div>
   <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../../development/0.1/index.html">Development</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../development/0.1/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <div class="title"><a href="../../ops/0.1/index.html">Operations</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../ops/0.1/index.html">0.1</a>
+        </li>
+      </ul>
+    </li>
     <li class="component is-current">
-      <div class="title"><a href="index.html">Development</a></div>
+      <div class="title"><a href="index.html">User Guides</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="index.html">0.1</a>
@@ -103,21 +110,21 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="index.html" class="home-link is-current"></a>
+  <a href="../../development/0.1/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Development</a></li>
-    <li><a href="index.html">Welcome</a></li>
+    <li><a href="index.html">User Guides</a></li>
+    <li><a href="faq.html">FAQ</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/LucienBrule/riddim/edit/main/docs/development/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/LucienBrule/riddim/edit/main/docs/user/modules/ROOT/pages/faq.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Welcome</h1>
+<h1 class="page">FAQ</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock note">
@@ -128,33 +135,54 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>AUDIT_ME: Bootstrap docs. Validate and revise during onboarding audits.</p>
+<p>AUDIT_ME: Placeholder questions. Replace with real user feedback.</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>riddim is a Kotlin-first live-coding environment that turns a DSL into timed sound events sent over OSC.</p>
-</div>
-<div class="paragraph">
-<p>This component documents the repo at a high level for developers who are getting started.</p>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_start_here"><a class="anchor" href="#_start_here"></a>Start here</h2>
+<h2 id="_why_dont_i_hear_sound"><a class="anchor" href="#_why_dont_i_hear_sound"></a>Why don&#8217;t I hear sound?</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p><a href="overview.html" class="xref page">Overview</a> for goals, architecture, and layout.</p>
+<p>Ensure SuperCollider is running and listening on the configured host/port.</p>
 </li>
 <li>
-<p><a href="onboarding.html" class="xref page">Onboarding</a> for setup and first commands.</p>
+<p>Verify the API returns <code>status: SENT</code>.</p>
 </li>
 <li>
-<p><a href="modules.html" class="xref page">Modules</a> for module responsibilities.</p>
+<p>Check firewall rules for UDP 57120.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_how_do_i_lower_latency"><a class="anchor" href="#_how_do_i_lower_latency"></a>How do I lower latency?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Run the engine locally (avoid remote UDP paths).</p>
+</li>
+<li>
+<p>Keep the tempo consistent; avoid OS-level power saving.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_can_i_schedule_sequences"><a class="anchor" href="#_can_i_schedule_sequences"></a>Can I schedule sequences?</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The DSL supports beat-based sequencing; see development docs for <code>song { &#8230;&#8203; }</code> usage.</p>
 </li>
 </ul>
 </div>

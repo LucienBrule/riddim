@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://lucienbrule.github.io/riddim/sitemap-development.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://lucienbrule.github.io/riddim/sitemap-ops.xml</loc>
+</sitemap>
+<sitemap>
+<loc>https://lucienbrule.github.io/riddim/sitemap-user.xml</loc>
+</sitemap>
+</sitemapindex>
