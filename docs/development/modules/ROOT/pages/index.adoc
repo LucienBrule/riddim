@@ -13,5 +13,5 @@ This component documents the repo at a high level for developers who are getting
 - xref:overview.adoc[Overview] for goals, architecture, and layout.
 - xref:onboarding.adoc[Onboarding] for setup and first commands.
 - xref:modules.adoc[Modules] for module responsibilities.
-- xref:user:index.adoc[User guides]
-- xref:ops:index.adoc[Operations]
+- xref:user::index.adoc[User guides]
+- xref:ops::index.adoc[Operations]

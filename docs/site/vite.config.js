@@ -8,7 +8,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: path.resolve(__dirname, '../build/docs-site'),
+          src: path.resolve(__dirname, '../build/docs-site/**/*'),
           dest: 'antora'
         }
       ]
