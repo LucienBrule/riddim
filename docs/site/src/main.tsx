@@ -4,9 +4,9 @@ import '../../theme/theme.css'
 import './style.css'
 
 const links = [
-  { title: 'Development', href: '/riddim/antora/development/0.1/index.html', blurb: 'Architecture, DSL, scheduler, build/run instructions.' },
-  { title: 'User', href: '/riddim/antora/user/0.1/index.html', blurb: 'How to trigger sounds and run the API without deep internals.' },
-  { title: 'Ops', href: '/riddim/antora/ops/0.1/index.html', blurb: 'Deployment, env config, and monitoring entry points.' }
+  { title: 'Development', href: '/antora/development/0.1/index.html', blurb: 'Architecture, DSL, scheduler, build/run instructions.' },
+  { title: 'User', href: '/antora/user/0.1/index.html', blurb: 'How to trigger sounds and run the API without deep internals.' },
+  { title: 'Ops', href: '/antora/ops/0.1/index.html', blurb: 'Deployment, env config, and monitoring entry points.' }
 ]
 
 const base = import.meta.env.BASE_URL.endsWith('/')
