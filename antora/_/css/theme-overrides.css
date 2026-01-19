@@ -12,6 +12,13 @@
   --ctp-accent-3: #a6d189;
   --ctp-border: #ccd0da;
   --ctp-code-bg: #e6e9ef;
+  --ctp-info: #89dceb;
+  --ctp-success: #a6e3a1;
+  --ctp-warning: #fab387;
+  --ctp-danger: #f38ba8;
+  --ctp-caution: #f9e2af;
+  --ctp-code-border: rgba(76, 79, 105, 0.14);
+  --ctp-code-glow: rgba(76, 79, 105, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +34,13 @@
     --ctp-accent-3: #94e2d5;
     --ctp-border: #313244;
     --ctp-code-bg: #1f2430;
+    --ctp-info: #89dceb;
+    --ctp-success: #a6e3a1;
+    --ctp-warning: #fab387;
+    --ctp-danger: #f38ba8;
+    --ctp-caution: #f9e2af;
+    --ctp-code-border: rgba(205, 214, 244, 0.14);
+    --ctp-code-glow: rgba(205, 214, 244, 0.08);
   }
 }
 
@@ -84,7 +98,7 @@ a:hover {
 .admonitionblock {
   background: var(--ctp-mantle);
   border: 1px solid var(--ctp-border);
-  border-left: 4px solid var(--ctp-accent);
+  border-left: 4px solid var(--ctp-info);
   border-radius: 10px;
   padding: 12px;
 }
@@ -98,37 +112,104 @@ a:hover {
   color: var(--ctp-text);
   font-weight: 600;
 }
-.admonitionblock.note { border-left-color: #89dceb; }
-.admonitionblock.tip { border-left-color: #a6e3a1; }
-.admonitionblock.important { border-left-color: #f38ba8; }
-.admonitionblock.warning { border-left-color: #fab387; }
-.admonitionblock.caution { border-left-color: #f9e2af; }
+.admonitionblock td.icon i {
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--ctp-text);
+  display: inline-flex;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.65rem;
+  text-transform: uppercase;
+}
+.admonitionblock td.icon i.icon-note {
+  background: rgba(137, 220, 235, 0.18);
+  border-color: rgba(137, 220, 235, 0.5);
+}
+.admonitionblock td.icon i.icon-note::after {
+  content: "note";
+  text-transform: lowercase;
+}
+.admonitionblock td.icon i.icon-tip {
+  background: rgba(166, 227, 161, 0.18);
+  border-color: rgba(166, 227, 161, 0.5);
+}
+.admonitionblock td.icon i.icon-important {
+  background: rgba(243, 139, 168, 0.2);
+  border-color: rgba(243, 139, 168, 0.55);
+}
+.admonitionblock td.icon i.icon-warning {
+  background: rgba(250, 179, 135, 0.22);
+  border-color: rgba(250, 179, 135, 0.55);
+}
+.admonitionblock td.icon i.icon-caution {
+  background: rgba(249, 226, 175, 0.24);
+  border-color: rgba(249, 226, 175, 0.6);
+}
+.admonitionblock.note { border-left-color: var(--ctp-info); }
+.admonitionblock.tip { border-left-color: var(--ctp-success); }
+.admonitionblock.important { border-left-color: var(--ctp-danger); }
+.admonitionblock.warning { border-left-color: var(--ctp-warning); }
+.admonitionblock.caution { border-left-color: var(--ctp-caution); }
 
 /* Code */
 pre, code, .literal {
   font-family: 'JetBrains Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 }
-.listingblock > .content pre {
+.doc .listingblock > .content,
+.doc .literalblock > .content {
   background: var(--ctp-code-bg);
-  border: 1px solid var(--ctp-border);
-  border-radius: 10px;
-  padding: 14px;
+  border: 1px solid var(--ctp-code-border);
+  border-radius: 12px;
+  box-shadow: inset 0 0 0 1px var(--ctp-code-glow);
+  padding: 12px 14px;
+}
+.doc .listingblock pre,
+.doc .literalblock pre {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+.doc pre.highlight code {
+  display: block;
+}
+.doc pre.highlight code[data-lang]::before {
+  content: attr(data-lang);
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(137, 220, 235, 0.5);
+  background: rgba(137, 220, 235, 0.18);
+  color: var(--ctp-text);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+  padding: 0.15rem 0.5rem;
+  text-transform: uppercase;
+  width: fit-content;
 }
 .admonitionblock pre {
   background: transparent;
   border: none;
-}
-.doc .listingblock pre:not(.highlight),
-.doc .literalblock pre,
-.doc pre.highlight > code {
-  background: transparent !important;
-  border: none !important;
 }
 .literalblock pre,
 .listingblock pre,
 .literalblock pre code,
 .listingblock pre code {
   color: var(--ctp-text);
+}
+
+/* HR */
+.doc hr {
+  border: none;
+  border-top: 1px solid var(--ctp-border);
+  margin: 1.75rem auto;
+  max-width: 520px;
+  opacity: 0.7;
+  width: 70%;
 }
 
 /* TOC / Sidebar */
@@ -170,6 +251,35 @@ pre, code, .literal {
   filter: brightness(1.05);
 }
 
+/* Edit/source link */
+.edit-this-page a {
+  align-items: center;
+  background: rgba(137, 220, 235, 0.14);
+  border: 1px solid rgba(137, 220, 235, 0.4);
+  border-radius: 999px;
+  color: var(--ctp-text);
+  display: inline-flex;
+  font-weight: 600;
+  gap: 0.35rem;
+  letter-spacing: 0.02em;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+}
+.edit-this-page a::before {
+  background-color: currentColor;
+  content: "";
+  display: inline-block;
+  height: 0.85rem;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Cpath%20d='M6%204L2.5%208L6%2012'%20fill='none'%20stroke='black'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3Cpath%20d='M10%204L13.5%208L10%2012'%20fill='none'%20stroke='black'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  width: 0.85rem;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2016%2016'%3E%3Cpath%20d='M6%204L2.5%208L6%2012'%20fill='none'%20stroke='black'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3Cpath%20d='M10%204L13.5%208L10%2012'%20fill='none'%20stroke='black'%20stroke-width='1.6'%20stroke-linecap='round'%20stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center / contain;
+}
+.edit-this-page a:hover {
+  background: rgba(137, 220, 235, 0.2);
+  border-color: rgba(137, 220, 235, 0.55);
+  color: var(--ctp-text);
+}
+
 /* Explore panel */
 .nav-panel-explore {
   background: transparent;
@@ -177,9 +287,11 @@ pre, code, .literal {
 }
 
 /* Download button CTA */
-.nav-item-download .btn {
+.nav-item-download .btn,
+.nav-item-download .button {
   background: linear-gradient(135deg, #f9e2af, #fab387);
   color: #0b0c10;
+  border: none;
 }
 
 /* Right-hand contents */
