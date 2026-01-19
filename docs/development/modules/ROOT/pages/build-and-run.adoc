@@ -1,0 +1,42 @@
+= Build and Run
+
+[NOTE]
+====
+AUDIT_ME: Commands here mirror the current Makefile and Gradle setup. Validate on your machine.
+====
+
+== Build and test
+[source,bash]
+----
+./gradlew build
+./gradlew test
+----
+
+== Dev server
+[source,bash]
+----
+./gradlew :modules:app-api:quarkusDev
+----
+
+== Makefile shortcuts
+[source,bash]
+----
+make build
+make test
+make dev
+----
+
+== Docker
+[source,bash]
+----
+make docker-build
+make docker-up
+make docker-ps
+make docker-down
+----
+
+== Artifact dashboard
+[source,bash]
+----
+./scripts/generate_dashboard.sh
+----

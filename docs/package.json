@@ -1,0 +1,15 @@
+{
+  "name": "riddim-docs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Antora documentation for riddim",
+  "scripts": {
+    "docs:build": "antora antora-playbook.yml",
+    "docs:serve": "npm run docs:build && npx serve build/docs-site"
+  },
+  "devDependencies": {
+    "@antora/cli": "3.1.7",
+    "@antora/site-generator-default": "3.1.7",
+    "serve": "14.2.1"
+  }
+}

@@ -1,0 +1,12 @@
+services:
+  app-api:
+    container_name: riddim-app-api
+    image: riddim-app-api:latest
+    build:
+      context: ../../
+      dockerfile: deployment/images/app-api/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - RIDDIM_ENGINE_SUPERCOLLIDER_HOST=localhost # Defaulting to localhost within container for now
+      - RIDDIM_ENGINE_SUPERCOLLIDER_PORT=57120

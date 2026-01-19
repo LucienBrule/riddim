@@ -1,0 +1,19 @@
+= Modules
+
+[NOTE]
+====
+AUDIT_ME: Module descriptions are based on current files and LINKAGE.md. Confirm as code evolves.
+====
+
+== Core modules
+- core: interfaces and sound types (ISoundEngine, SoundEvent, Receipt).
+- model: domain data types like BeatTime and TempoBpm.
+- dsl: Kotlin builders for composing Song structures.
+- playback: scheduler and clock for timed playback.
+- engine-supercollider: OSC encoder and SuperCollider engine implementation.
+- app-api: Quarkus REST API for /sound/play.
+
+== Dependency rules
+- core and model are shared by other modules.
+- engine-supercollider should remain behind core interfaces.
+- Circular dependencies are not allowed.

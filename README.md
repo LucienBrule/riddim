@@ -1,3 +1,20 @@
+# riddim
+
+[![CI](https://github.com/LucienBrule/riddim/actions/workflows/ci.yml/badge.svg)](https://github.com/LucienBrule/riddim/actions/workflows/ci.yml)
+[![Docs](https://github.com/LucienBrule/riddim/actions/workflows/docs.yml/badge.svg)](https://github.com/LucienBrule/riddim/actions/workflows/docs.yml)
+[![Docs Site](https://img.shields.io/badge/docs-live-brightgreen)](https://lucienbrule.github.io/riddim)
+
+Live-coding music environment bridging a Kotlin DSL with SuperCollider via OSC.
+
+Tags: Kotlin, DSL, SuperCollider, OSC, Live Coding
+
+Docs: https://lucienbrule.github.io/riddim
+
+## Build Status
+
+CI runs `./gradlew build` across: core, model, engine-supercollider, playback, dsl, app-api.
+See [ASSETS_DASHBOARD.md](ASSETS_DASHBOARD.md) for the latest artifact matrix.
+
 ---
 
 ## 🗂 `riddim/` – Root Directory Layout
@@ -17,6 +34,8 @@ riddim/
 ---
 
 ## 🧱 `modules/` — Core Modular Layout
+
+See [LINKAGE.md](LINKAGE.md) for a detailed dependency graph.
 
 ```
 modules/

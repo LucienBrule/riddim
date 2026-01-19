@@ -1,0 +1,45 @@
+= Onboarding
+
+[NOTE]
+====
+AUDIT_ME: This onboarding flow is a bootstrap draft. Confirm prerequisites and steps.
+====
+
+== Prerequisites
+- JDK 17+ available on PATH.
+- Gradle wrapper executes in this repo.
+- Docker optional for containerized runs.
+
+== Quick start
+. Build the workspace.
++
+[source,bash]
+----
+./gradlew build
+----
+. Run tests.
++
+[source,bash]
+----
+./gradlew test
+----
+. Start the API in dev mode.
++
+[source,bash]
+----
+./gradlew :modules:app-api:quarkusDev
+----
+
+== First request
+With the API running, post a sound event.
+[source,bash]
+----
+curl -X POST http://localhost:8080/sound/play \
+  -H "Content-Type: application/json" \
+  -d '{"id": {"value": "test-id"}, "type": "kick", "parameters": {"gain": 1.0}}'
+----
+
+== Configuration
+- Engine host: riddim.engine.supercollider.host
+- Engine port: riddim.engine.supercollider.port
+- Docker compose uses env vars RIDDIM_ENGINE_SUPERCOLLIDER_HOST and RIDDIM_ENGINE_SUPERCOLLIDER_PORT.

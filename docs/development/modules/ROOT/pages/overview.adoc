@@ -1,0 +1,27 @@
+= Overview
+
+[NOTE]
+====
+AUDIT_ME: High-level summary based on current repo state. Verify details.
+====
+
+== Purpose
+riddim aims to provide a type-safe Kotlin DSL for composing rhythmic structures that can be played by a sound engine.
+
+== Architecture at a glance
+- DSL builders produce a Song (beat-timestamped sound events).
+- Playback schedules events against a clock.
+- Engine implementations send events over OSC (SuperCollider via /dirt/play).
+- app-api exposes HTTP endpoints to trigger events.
+
+== Repo layout
+- Root Gradle build with module includes in settings.gradle.kts.
+- Modules live in modules/ and are compiled independently.
+- Docker assets live in deployment/ with a compose file.
+
+== Success metrics
+- Green build integrity with clean tests and no warnings.
+- Syntactic precision for a type-safe Kotlin DSL.
+- Engine reliability with deterministic OSC.
+- Architectural clarity with explicit module boundaries.
+- Artifact visibility via tracked build outputs.

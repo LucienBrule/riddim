@@ -1,0 +1,15 @@
+= Welcome
+
+[NOTE]
+====
+AUDIT_ME: Bootstrap docs. Validate and revise during onboarding audits.
+====
+
+riddim is a Kotlin-first live-coding environment that turns a DSL into timed sound events sent over OSC.
+
+This component documents the repo at a high level for developers who are getting started.
+
+== Start here
+- xref:overview.adoc[Overview] for goals, architecture, and layout.
+- xref:onboarding.adoc[Onboarding] for setup and first commands.
+- xref:modules.adoc[Modules] for module responsibilities.
