@@ -1,0 +1,65 @@
+:root {
+  --riddim-bg: #0b0c10;
+  --riddim-panel: #11131a;
+  --riddim-accent: #4ade80;
+  --riddim-accent-2: #0ea5e9;
+  --riddim-text: #e5e7eb;
+  --riddim-muted: #9ca3af;
+  --riddim-border: #1f2430;
+}
+
+body {
+  background: radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.05), transparent 30%),
+              radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.06), transparent 28%),
+              var(--riddim-bg);
+  color: var(--riddim-text);
+}
+
+.header, .navbar, .toolbar, .nav, .doc, .sidebar {
+  background-color: transparent;
+}
+
+.navbar {
+  border-bottom: 1px solid var(--riddim-border);
+}
+
+.doc {
+  background: var(--riddim-panel);
+  border: 1px solid var(--riddim-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.doc h1, .doc h2, .doc h3, .doc h4 {
+  color: var(--riddim-text);
+}
+
+.doc p, .doc li {
+  color: var(--riddim-muted);
+}
+
+a {
+  color: var(--riddim-accent);
+}
+
+a:hover {
+  color: var(--riddim-accent-2);
+}
+
+.breadcrumbs a {
+  color: var(--riddim-muted);
+}
+
+.footer {
+  border-top: 1px solid var(--riddim-border);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --riddim-bg: #f7f8fb;
+    --riddim-panel: #ffffff;
+    --riddim-text: #0b0c10;
+    --riddim-muted: #4b5563;
+    --riddim-border: #e5e7eb;
+  }
+}

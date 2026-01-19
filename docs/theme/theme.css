@@ -1,0 +1,19 @@
+:root {
+  --riddim-bg: #0b0c10;
+  --riddim-panel: #11131a;
+  --riddim-accent: #4ade80;
+  --riddim-accent-2: #0ea5e9;
+  --riddim-text: #e5e7eb;
+  --riddim-muted: #9ca3af;
+  --riddim-border: #1f2430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --riddim-bg: #f7f8fb;
+    --riddim-panel: #ffffff;
+    --riddim-text: #0b0c10;
+    --riddim-muted: #4b5563;
+    --riddim-border: #e5e7eb;
+  }
+}

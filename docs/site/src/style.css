@@ -1,20 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap');
+@import '../../theme/theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  --bg: #0b0c10;
-  --panel: #11131a;
-  --accent: #4ade80;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #1f2430;
-  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  color-scheme: light dark;
 }
 
-* { box-sizing: border-box; }
 body {
   margin: 0;
   background: radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.05), transparent 30%),
-              radial-gradient(circle at 80% 0%, rgba(74, 222, 128, 0.06), transparent 28%),
-              var(--bg);
-  color: var(--text);
+              radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.06), transparent 28%),
+              var(--riddim-bg);
+  color: var(--riddim-text);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 }
 
 .wrap {
@@ -25,7 +25,7 @@ body {
 
 .hero {
   background: linear-gradient(135deg, rgba(74, 222, 128, 0.12), rgba(14, 165, 233, 0.08));
-  border: 1px solid var(--border);
+  border: 1px solid var(--riddim-border);
   border-radius: 16px;
   padding: 32px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
@@ -35,7 +35,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 600;
-  color: var(--accent);
+  color: var(--riddim-accent);
   margin: 0 0 6px;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .lede {
-  color: var(--muted);
+  color: var(--riddim-muted);
   margin: 12px 0 20px;
 }
 
@@ -56,7 +56,7 @@ body {
 }
 
 .btn {
-  background: var(--accent);
+  background: var(--riddim-accent);
   color: #0b0c10;
   padding: 12px 18px;
   border-radius: 10px;
@@ -79,8 +79,8 @@ body {
 }
 
 .cards li {
-  background: var(--panel);
-  border: 1px solid var(--border);
+  background: var(--riddim-panel);
+  border: 1px solid var(--riddim-border);
   border-radius: 14px;
   padding: 18px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
@@ -92,11 +92,11 @@ body {
 
 .cards p {
   margin: 0 0 12px;
-  color: var(--muted);
+  color: var(--riddim-muted);
 }
 
 .cards a {
-  color: var(--accent);
+  color: var(--riddim-accent);
   text-decoration: none;
   font-weight: 600;
 }
