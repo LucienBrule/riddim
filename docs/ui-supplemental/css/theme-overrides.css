@@ -88,6 +88,9 @@ a:hover {
 .admonitionblock table {
   margin: 0;
 }
+.admonitionblock td.content {
+  background: transparent;
+}
 .admonitionblock .title {
   color: var(--ctp-text);
   font-weight: 600;
@@ -108,6 +111,10 @@ pre, code, .literal {
   border-radius: 10px;
   padding: 14px;
 }
+.admonitionblock pre {
+  background: transparent;
+  border: none;
+}
 .literalblock pre,
 .listingblock pre,
 .literalblock pre code,
@@ -117,7 +124,7 @@ pre, code, .literal {
 
 /* TOC / Sidebar */
 .toc .toc-list a {
-  color: var(--ctp-subtext);
+  color: var(--ctp-text);
 }
 .toc .toc-list a:hover,
 .toc .toc-list a:focus {
@@ -149,4 +156,26 @@ pre, code, .literal {
 }
 .btn:hover, .button:hover {
   filter: brightness(1.05);
+}
+
+/* Explore panel */
+.nav-panel-explore {
+  background: transparent;
+  border: none;
+}
+
+/* Download button CTA */
+.nav-item-download .btn {
+  background: linear-gradient(135deg, #f9e2af, #fab387);
+  color: #0b0c10;
+}
+
+/* Right-hand contents */
+body > div > main > div.content > aside > div {
+  color: var(--ctp-text);
+}
+
+/* Left nav section heading */
+body > div > div > aside > div > div.nav-panel-menu.is-active > nav > h3 {
+  color: var(--ctp-text);
 }
