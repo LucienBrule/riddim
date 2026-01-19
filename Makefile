@@ -1,4 +1,4 @@
-.PHONY: build test clean dashboard dev build-docs docker-build docker-up docker-down docker-ps
+.PHONY: build test clean dashboard dev build-docs build-web docker-build docker-up docker-down docker-ps
 
 COMPOSE_FILE := deployment/compose/docker-compose.yml
 
@@ -21,8 +21,13 @@ dev:
 build-docs:
 	cd docs && npm run docs:bundle
 
-docker-build: build
+build-web:
+	cd web && npm install
+	cd web && npm run build
+
+docker-build: build build-web
 	docker build -t riddim-app-api:latest -f deployment/images/app-api/Dockerfile .
+	docker build -t riddim-web:latest -f deployment/images/web-frontend/Dockerfile .
 
 docker-up:
 	docker compose -f $(COMPOSE_FILE) up -d

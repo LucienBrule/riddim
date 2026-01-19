@@ -1,0 +1,51 @@
+@import './theme.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(166, 227, 161, 0.06), transparent 32%),
+    radial-gradient(circle at 78% 5%, rgba(137, 220, 235, 0.08), transparent 30%),
+    var(--riddim-bg);
+  color: var(--riddim-text);
+  min-height: 100vh;
+}
+
+.pill {
+  background: rgba(166, 227, 161, 0.12);
+  border: 1px solid var(--riddim-border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  color: var(--riddim-accent);
+  font-weight: 600;
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(166, 227, 161, 0.08), rgba(137, 220, 235, 0.06)), var(--riddim-panel);
+  border: 1px solid var(--riddim-border);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--riddim-accent), var(--riddim-accent-2));
+  color: #0b0c10;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  box-shadow: 0 12px 30px rgba(166, 227, 161, 0.35);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+
+.mono {
+  font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}

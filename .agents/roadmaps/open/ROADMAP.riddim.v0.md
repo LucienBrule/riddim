@@ -36,5 +36,17 @@ Bootstrap the `riddim/` workspace as a clean, build-green Kotlin/Quarkus multi-m
 
 ## Phase 6 — Docs Platform (EPIC.docs.001.docs-platform)
 
-- [ ] TASK.docs.001.vite-static-shell: Vite shell for docs + Antora integration
-- [ ] TASK.docs.002.multi-audience-structure: Development/User/Ops doc sets
+- [x] TASK.docs.001.vite-static-shell: Vite shell for docs + Antora integration
+- [x] TASK.docs.002.multi-audience-structure: Development/User/Ops doc sets
+
+## Phase 7 — Docs Theming Unification (EPIC.docs.002.theming-unification)
+
+- [x] TASK.docs.003.callouts-code-contrast: Dark-friendly callouts/code/TOC styling
+- [x] TASK.docs.004.catppuccin-unify-fonts: Catppuccin tokens + shared fonts/buttons
+
+## Phase 8 — Web Frontend Platform (EPIC.web.001.frontend-platform)
+
+- [x] TASK.web.001.turborepo-scaffold: Web workspace foundation
+- [x] TASK.web.002.runtime-app: React/Vite/TS app with runtime config and /riddim base
+- [x] TASK.web.003.compose-integration: Docker Compose for frontend + backend
+- [x] TASK.web.004.auth-plan: OAuth/RBAC plan for SPA + backend

@@ -11,9 +11,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: docs
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,11 +19,21 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-          cache-dependency-path: docs/package-lock.json
-      - name: Install deps
-        run: npm ci
+          cache-dependency-path: |
+            docs/package-lock.json
+            web/package-lock.json
+      - name: Install docs deps
+        run: npm ci --prefix docs
       - name: Build docs bundle (Antora + Vite shell)
-        run: npm run docs:bundle
+        run: npm run docs:bundle --prefix docs
+      - name: Install web deps
+        run: npm ci --prefix web
+      - name: Build web app
+        run: npm run build --prefix web
+      - name: Copy web app into Pages payload
+        run: |
+          mkdir -p docs/site/dist/app
+          cp -r web/apps/app/dist/* docs/site/dist/app/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

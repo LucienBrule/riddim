@@ -10,3 +10,16 @@ services:
     environment:
       - RIDDIM_ENGINE_SUPERCOLLIDER_HOST=localhost # Defaulting to localhost within container for now
       - RIDDIM_ENGINE_SUPERCOLLIDER_PORT=57120
+
+  web:
+    container_name: riddim-web
+    image: riddim-web:latest
+    build:
+      context: ../../
+      dockerfile: deployment/images/web-frontend/Dockerfile
+    ports:
+      - "4173:80"
+    volumes:
+      - ../../deployment/config/web-config.compose.json:/usr/share/nginx/html/riddim/app/config.json:ro
+    depends_on:
+      - app-api

@@ -25,6 +25,9 @@ docs/build/
 docs/.cache/
 docs/site/node_modules/
 docs/site/dist/
+web/node_modules/
+web/apps/*/node_modules/
+web/apps/*/dist/
 
 # OS specific
 .DS_Store

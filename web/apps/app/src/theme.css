@@ -9,7 +9,6 @@
   --riddim-text: #4c4f69;
   --riddim-muted: #6c6f85;
   --riddim-border: #ccd0da;
-  --riddim-code-bg: #e6e9ef;
   --riddim-surface: #f2d5cf;
 }
 
@@ -23,7 +22,11 @@
     --riddim-text: #cdd6f4;
     --riddim-muted: #a6adc8;
     --riddim-border: #313244;
-    --riddim-code-bg: #1f2430;
     --riddim-surface: #11111b;
   }
+}
+
+:root {
+  color-scheme: light dark;
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 }

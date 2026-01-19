@@ -1,0 +1,4 @@
+{
+  "apiBase": "http://app-api:8080",
+  "rpcPath": "/sound/play"
+}

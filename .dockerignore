@@ -3,6 +3,9 @@
 **/.gradle
 **/build
 !**/gradle/wrapper/gradle-wrapper.jar
+!modules/app-api/build/quarkus-app/**
+!modules/app-api/build/libs/**
+!web/apps/app/dist/**
 
 # Kotlin
 **/bin
@@ -24,6 +27,11 @@
 **/docs/node_modules
 **/docs/build
 **/docs/.cache
+
+# Web
+**/web/node_modules
+**/web/apps/*/node_modules
+**/web/apps/*/dist
 
 # OS specific
 **/.DS_Store

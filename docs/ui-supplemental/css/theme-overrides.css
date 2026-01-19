@@ -1,18 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap');
+
 :root {
-  --riddim-bg: #0b0c10;
-  --riddim-panel: #11131a;
-  --riddim-accent: #4ade80;
-  --riddim-accent-2: #0ea5e9;
-  --riddim-text: #e5e7eb;
-  --riddim-muted: #9ca3af;
-  --riddim-border: #1f2430;
+  /* Catppuccin Frappe (light) defaults */
+  --ctp-surface: #f2d5cf;
+  --ctp-base: #eff1f5;
+  --ctp-mantle: #e6e9ef;
+  --ctp-text: #4c4f69;
+  --ctp-subtext: #6c6f85;
+  --ctp-accent: #81c8be;
+  --ctp-accent-2: #99d1db;
+  --ctp-accent-3: #a6d189;
+  --ctp-border: #ccd0da;
+  --ctp-code-bg: #e6e9ef;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Catppuccin Mocha */
+    --ctp-surface: #11111b;
+    --ctp-base: #1e1e2e;
+    --ctp-mantle: #181825;
+    --ctp-text: #cdd6f4;
+    --ctp-subtext: #a6adc8;
+    --ctp-accent: #a6e3a1;
+    --ctp-accent-2: #89dceb;
+    --ctp-accent-3: #94e2d5;
+    --ctp-border: #313244;
+    --ctp-code-bg: #1f2430;
+  }
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.05), transparent 30%),
-              radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.06), transparent 28%),
-              var(--riddim-bg);
-  color: var(--riddim-text);
+  background: radial-gradient(circle at 20% 20%, rgba(166, 227, 161, 0.06), transparent 32%),
+              radial-gradient(circle at 78% 5%, rgba(137, 220, 235, 0.08), transparent 30%),
+              var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
 }
 
 .header, .navbar, .toolbar, .nav, .doc, .sidebar {
@@ -20,46 +43,110 @@ body {
 }
 
 .navbar {
-  border-bottom: 1px solid var(--riddim-border);
+  border-bottom: 1px solid var(--ctp-border);
 }
 
 .doc {
-  background: var(--riddim-panel);
-  border: 1px solid var(--riddim-border);
+  background: linear-gradient(135deg, rgba(166, 227, 161, 0.08), rgba(137, 220, 235, 0.06)), var(--ctp-mantle);
+  border: 1px solid var(--ctp-border);
   border-radius: 12px;
   padding: 16px;
 }
 
 .doc h1, .doc h2, .doc h3, .doc h4 {
-  color: var(--riddim-text);
+  color: var(--ctp-text);
 }
 
 .doc p, .doc li {
-  color: var(--riddim-muted);
+  color: var(--ctp-subtext);
 }
 
 a {
-  color: var(--riddim-accent);
+  color: var(--ctp-accent);
 }
 
 a:hover {
-  color: var(--riddim-accent-2);
+  color: var(--ctp-accent-2);
 }
 
 .breadcrumbs a {
-  color: var(--riddim-muted);
+  color: var(--ctp-subtext);
 }
 
 .footer {
-  border-top: 1px solid var(--riddim-border);
+  border-top: 1px solid var(--ctp-border);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --riddim-bg: #f7f8fb;
-    --riddim-panel: #ffffff;
-    --riddim-text: #0b0c10;
-    --riddim-muted: #4b5563;
-    --riddim-border: #e5e7eb;
-  }
+/* Callouts */
+.admonitionblock {
+  background: var(--ctp-mantle);
+  border: 1px solid var(--ctp-border);
+  border-left: 4px solid var(--ctp-accent);
+  border-radius: 10px;
+  padding: 12px;
+}
+.admonitionblock table {
+  margin: 0;
+}
+.admonitionblock .title {
+  color: var(--ctp-text);
+  font-weight: 600;
+}
+.admonitionblock.note { border-left-color: #89dceb; }
+.admonitionblock.tip { border-left-color: #a6e3a1; }
+.admonitionblock.important { border-left-color: #f38ba8; }
+.admonitionblock.warning { border-left-color: #fab387; }
+.admonitionblock.caution { border-left-color: #f9e2af; }
+
+/* Code */
+pre, code, .literal {
+  font-family: 'JetBrains Mono', SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+}
+.listingblock > .content pre {
+  background: var(--ctp-code-bg);
+  border: 1px solid var(--ctp-border);
+  border-radius: 10px;
+  padding: 14px;
+}
+.literalblock pre,
+.listingblock pre,
+.literalblock pre code,
+.listingblock pre code {
+  color: var(--ctp-text);
+}
+
+/* TOC / Sidebar */
+.toc .toc-list a {
+  color: var(--ctp-subtext);
+}
+.toc .toc-list a:hover,
+.toc .toc-list a:focus {
+  color: var(--ctp-accent);
+}
+.toc .toc-list li {
+  border-left: 1px solid var(--ctp-border);
+  padding-left: 8px;
+}
+
+/* Left nav hover/active */
+.nav .nav-list .nav-link {
+  color: var(--ctp-subtext);
+  border-radius: 8px;
+}
+.nav .nav-list .nav-link:hover,
+.nav .nav-list .nav-link.is-current {
+  color: var(--ctp-text);
+  background: rgba(166, 227, 161, 0.08);
+}
+
+/* Buttons */
+.btn, .button {
+  background: linear-gradient(135deg, var(--ctp-accent), var(--ctp-accent-2));
+  color: #0b0c10;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+}
+.btn:hover, .button:hover {
+  filter: brightness(1.05);
 }
