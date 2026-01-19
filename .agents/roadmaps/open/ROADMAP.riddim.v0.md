@@ -50,3 +50,9 @@ Bootstrap the `riddim/` workspace as a clean, build-green Kotlin/Quarkus multi-m
 - [x] TASK.web.002.runtime-app: React/Vite/TS app with runtime config and /riddim base
 - [x] TASK.web.003.compose-integration: Docker Compose for frontend + backend
 - [x] TASK.web.004.auth-plan: OAuth/RBAC plan for SPA + backend
+
+## Phase 9 — Docs Visual Polish (EPIC.docs.003.ui-polish)
+
+- [ ] TASK.docs.005.cta-edit-pills-codeblocks: CTA/edit labels, pills, code framing, HRs
+- [ ] TASK.docs.006.header-bg-spacing: Header/background/TOC/nav spacing and contrast
+- [ ] TASK.docs.007.version-picker-border: Resolve ghost border on version selector
