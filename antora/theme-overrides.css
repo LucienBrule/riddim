@@ -74,9 +74,10 @@ a:hover {
 }
 
 .footer {
-  border-top: 1px solid var(--ctp-border);
+  border-top: none;
   padding: 8px 0;
   margin-top: 8px;
+  background: transparent;
 }
 
 /* Callouts */
@@ -116,6 +117,12 @@ pre, code, .literal {
 .admonitionblock pre {
   background: transparent;
   border: none;
+}
+.doc .listingblock pre:not(.highlight),
+.doc .literalblock pre,
+.doc pre.highlight > code {
+  background: transparent !important;
+  border: none !important;
 }
 .literalblock pre,
 .listingblock pre,
