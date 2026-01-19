@@ -91,7 +91,7 @@ a:hover {
   margin: 0;
 }
 .admonitionblock td.content {
-  background: transparent;
+  background: transparent !important;
 }
 .admonitionblock .title {
   color: var(--ctp-text);
