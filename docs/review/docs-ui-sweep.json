@@ -1,0 +1,63 @@
+{
+  "baseUrl": "",
+  "mcp": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "chrome-devtools-mcp@latest",
+      "--headless=true",
+      "--executable-path=/usr/bin/google-chrome",
+      "--isolated=true",
+      "--chrome-arg=--no-sandbox",
+      "--chrome-arg=--disable-gpu"
+    ]
+  },
+  "viewports": [
+    {
+      "name": "desktop-1440x900",
+      "width": 1440,
+      "height": 900,
+      "fullPage": true
+    },
+    {
+      "name": "mobile-390x844",
+      "width": 390,
+      "height": 844,
+      "fullPage": true
+    }
+  ],
+  "pages": [
+    {
+      "slug": "user-welcome",
+      "path": "user/0.1/index.html"
+    },
+    {
+      "slug": "user-getting-started",
+      "path": "user/0.1/getting-started.html"
+    },
+    {
+      "slug": "user-faq",
+      "path": "user/0.1/faq.html"
+    },
+    {
+      "slug": "dev-index",
+      "path": "development/0.1/index.html"
+    },
+    {
+      "slug": "dev-onboarding",
+      "path": "development/0.1/onboarding.html"
+    },
+    {
+      "slug": "dev-build-and-run",
+      "path": "development/0.1/build-and-run.html"
+    },
+    {
+      "slug": "ops-index",
+      "path": "ops/0.1/index.html"
+    },
+    {
+      "slug": "ops-monitoring",
+      "path": "ops/0.1/monitoring.html"
+    }
+  ]
+}

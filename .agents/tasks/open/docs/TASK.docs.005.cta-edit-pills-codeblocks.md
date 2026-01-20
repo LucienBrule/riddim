@@ -35,9 +35,10 @@ Align docs CTAs and labels with the theme and refine admonition/code visuals.
 - Use Catppuccin sapphire/sky for info accents.
 - Keep contrasts AA; avoid pure white.
 - Updated `docs/ui-supplemental/css/theme-overrides.css` for CTA, admonition pill, code framing, and HR styling.
-- Added `docs/ui-supplemental/js/theme-overrides.js` and wired it in `docs/ui-supplemental/partials/head.hbs` to relabel the edit link.
+- Added `docs/ui-supplemental/partials/edit-this-page.hbs` to relabel the edit link without JS.
+- Pulled the Antora UI bundle from GitLab to confirm `edit-this-page.hbs` partial naming.
 - Ran `npm run docs:bundle` (fs.Stats deprecation warning from Antora).
-- Chrome DevTools MCP could not start (missing X server), so no UI screenshot captured.
+- Chrome DevTools MCP works; load `docs/site/dist/antora/user/0.1/...` to resolve `_` assets.
 
 ---
 
