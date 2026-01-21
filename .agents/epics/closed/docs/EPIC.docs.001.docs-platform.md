@@ -2,7 +2,7 @@
 
 Namespace: `docs`  
 Slug: `docs-platform`  
-Status: open
+Status: closed
 
 ## Objective
 Evolve the documentation platform to support multi-audience docs and a Vite-based shell that can host and style Antora outputs.

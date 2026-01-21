@@ -53,6 +53,6 @@ Bootstrap the `riddim/` workspace as a clean, build-green Kotlin/Quarkus multi-m
 
 ## Phase 9 — Docs Visual Polish (EPIC.docs.003.ui-polish)
 
-- [ ] TASK.docs.005.cta-edit-pills-codeblocks: CTA/edit labels, pills, code framing, HRs
-- [ ] TASK.docs.006.header-bg-spacing: Header/background/TOC/nav spacing and contrast
-- [ ] TASK.docs.007.version-picker-border: Resolve ghost border on version selector
+- [x] TASK.docs.005.cta-edit-pills-codeblocks: CTA/edit labels, pills, code framing, HRs
+- [x] TASK.docs.006.header-bg-spacing: Header/background/TOC/nav spacing and contrast
+- [x] TASK.docs.007.version-picker-border: Resolve ghost border on version selector

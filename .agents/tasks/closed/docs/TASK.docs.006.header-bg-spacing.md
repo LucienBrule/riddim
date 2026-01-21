@@ -33,11 +33,17 @@ Fix header/background behavior, TOC/nav contrast, and spacing issues for the doc
 ## Recon
 - Consider `position: sticky` + `backdrop-filter` with semi-opaque background.
 - Keep Catppuccin base colors consistent across scroll depth.
+- Updated header/background styling in `docs/ui-supplemental/css/theme-overrides.css` with solid separation.
+- Adjusted TOC/nav colors and hover states for contrast.
+- Added spacing after listing/literal blocks and refined HRs.
+- Ran `npm run docs:bundle`; installed docs deps with `npm install` when Antora was missing.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-20 19:03 (local)
+- Branch: `main`
 - Summary:
-  - <1–3 bullets.>
+  - Stabilized header/background separation and TOC/nav contrast with Catppuccin tones.
+  - Improved code block spacing and HR styling across docs pages.
+  - Verified `npm run docs:bundle` output after dependency install.

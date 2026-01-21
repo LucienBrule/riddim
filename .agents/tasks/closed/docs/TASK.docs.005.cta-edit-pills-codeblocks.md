@@ -39,11 +39,16 @@ Align docs CTAs and labels with the theme and refine admonition/code visuals.
 - Pulled the Antora UI bundle from GitLab to confirm `edit-this-page.hbs` partial naming.
 - Ran `npm run docs:bundle` (fs.Stats deprecation warning from Antora).
 - Chrome DevTools MCP works; load `docs/site/dist/antora/user/0.1/...` to resolve `_` assets.
+- Aligned language tags and code block framing to avoid white fills and improve spacing.
+- Added `docs/ui-supplemental/partials/header-content.hbs` to simplify nav and brand link.
+- Captured UI review screenshots under `docs/screenshots/docs-ui/20260120`.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-20 19:03 (local)
+- Branch: `main`
 - Summary:
-  - <1–3 bullets.>
+  - Restyled CTAs, code blocks, admonition pills, and HRs to match Catppuccin.
+  - Added Antora partial overrides for edit link and header, removing JS reliance.
+  - Verified docs bundle output and UI via Chrome MCP screenshots.

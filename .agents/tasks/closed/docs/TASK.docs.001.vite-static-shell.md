@@ -28,12 +28,15 @@ Create a Vite-based static shell that can host Antora-generated docs and apply s
 - Antora output is reachable from the Vite shell (via asset copy or fetch strategy).
 
 ## Recon
-- <Fill during implementation: directory structure decisions, base path setup, asset integration approach.>
+- Verified Vite docs shell under `docs/site/` with base `/riddim/` and static copy integration.
+- Confirmed `docs/site/dist` and Antora bundle outputs listed in `ASSETS.md`.
+- `npm run docs:bundle` produces the Vite shell with Antora assets.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-20 19:03 (local)
+- Branch: `main`
 - Summary:
-  - <1–3 bullets.>
+  - Audited the existing Vite shell and Antora asset bundling for the docs hub.
+  - Verified build outputs and base path configuration already in place.

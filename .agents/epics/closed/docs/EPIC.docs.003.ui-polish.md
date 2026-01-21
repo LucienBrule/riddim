@@ -2,7 +2,7 @@
 
 Namespace: `docs`  
 Slug: `ui-polish`  
-Status: open
+Status: closed
 
 ## Objective
 Finalize the docs UI/UX with coherent CTAs, labels, code block styling, header behavior, and background/spacing refinements so the Antora site and hub feel intentionally designed.

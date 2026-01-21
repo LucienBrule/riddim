@@ -27,11 +27,14 @@ Resolve the phantom border on the version picker: either remove it or make it an
 
 ## Recon
 - Check version selector container and siblings for shadows/borders.
+- Applied UI overrides to remove default box-shadow and normalize the version picker context bar.
+- Verified in Chrome MCP on development onboarding page.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-20 19:03 (local)
+- Branch: `main`
 - Summary:
-  - <1–3 bullets.>
+  - Removed the ghost border effect by restyling the version picker context area.
+  - Confirmed the picker bar is intentional and consistent with the sidebar.
