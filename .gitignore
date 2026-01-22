@@ -26,6 +26,7 @@ docs/.cache/
 docs/site/node_modules/
 docs/site/dist/
 docs/screenshots/
+.workers/
 web/node_modules/
 web/apps/*/node_modules/
 web/apps/*/dist/
