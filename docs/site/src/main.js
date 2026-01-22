@@ -12,6 +12,7 @@ app.innerHTML = `
       <h1>Docs Hub</h1>
       <p class="lede">Explore development, user, and ops guides. Antora outputs are bundled below.</p>
       <div class="actions">
+        <a class="btn" href="/riddim/">App</a>
         <a class="btn" href="${base}/antora/development/0.1/index.html">Development</a>
         <a class="btn" href="${base}/antora/user/0.1/index.html">User</a>
         <a class="btn" href="${base}/antora/ops/0.1/index.html">Ops</a>
@@ -20,6 +21,11 @@ app.innerHTML = `
     <section class="section">
       <h2>What's inside</h2>
       <ul class="cards">
+        <li>
+          <h3>App</h3>
+          <p>React/Vite runtime-configurable frontend deployed at /riddim.</p>
+          <a href="/riddim/">Open App →</a>
+        </li>
         <li>
           <h3>Development</h3>
           <p>Architecture, DSL, scheduler, build/run instructions.</p>

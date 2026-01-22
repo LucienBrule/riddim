@@ -32,8 +32,8 @@ jobs:
         run: npm run build --prefix web
       - name: Copy web app into Pages payload
         run: |
-          mkdir -p docs/site/dist/app
-          cp -r web/apps/app/dist/* docs/site/dist/app/
+          mkdir -p docs/site/dist
+          cp -r web/apps/app/dist/* docs/site/dist/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:

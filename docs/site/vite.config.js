@@ -3,7 +3,7 @@ import { viteStaticCopy } from 'vite-plugin-static-copy'
 import path from 'path'
 
 export default defineConfig({
-  base: '/riddim/',
+  base: '/riddim/docs/',
   plugins: [
     viteStaticCopy({
       targets: [
@@ -15,6 +15,6 @@ export default defineConfig({
     })
   ],
   build: {
-    outDir: 'dist'
+    outDir: 'dist/docs'
   }
 })

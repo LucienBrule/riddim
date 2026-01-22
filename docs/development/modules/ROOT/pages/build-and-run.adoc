@@ -17,8 +17,9 @@ AUDIT_ME: Commands here mirror the current Makefile and Gradle setup. Validate o
 == Web & Docs
 [source,bash]
 ----
-./gradlew webBuild
-./gradlew docsBuild
+npm run build --prefix web
+npm run test --prefix web
+npm run docs:build --prefix docs
 ----
 
 == Dev server

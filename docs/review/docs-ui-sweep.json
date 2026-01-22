@@ -1,5 +1,5 @@
 {
-  "baseUrl": "",
+  "baseUrl": "http://localhost:4174/riddim/docs/antora",
   "mcp": {
     "command": "npx",
     "args": [

@@ -13,6 +13,6 @@ RUN cd web && npm run build --workspace @riddim/app
 
 FROM nginx:1.27-alpine
 COPY deployment/images/web-frontend/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=build /app/web/apps/app/dist /usr/share/nginx/html/riddim/app
+COPY --from=build /app/web/apps/app/dist /usr/share/nginx/html/riddim
 
 EXPOSE 80

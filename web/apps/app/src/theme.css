@@ -4,8 +4,9 @@
   /* Frappe (light) defaults */
   --riddim-bg: #eff1f5;
   --riddim-panel: #e6e9ef;
-  --riddim-accent: #81c8be;
+  --riddim-accent: #1e66f5;
   --riddim-accent-2: #99d1db;
+  --riddim-accent-3: #04a5e5;
   --riddim-text: #4c4f69;
   --riddim-muted: #6c6f85;
   --riddim-border: #ccd0da;
@@ -17,8 +18,9 @@
     /* Mocha (dark) */
     --riddim-bg: #1e1e2e;
     --riddim-panel: #181825;
-    --riddim-accent: #a6e3a1;
-    --riddim-accent-2: #89dceb;
+    --riddim-accent: #89b4fa;
+    --riddim-accent-2: #74c7ec;
+    --riddim-accent-3: #89dceb;
     --riddim-text: #cdd6f4;
     --riddim-muted: #a6adc8;
     --riddim-border: #313244;

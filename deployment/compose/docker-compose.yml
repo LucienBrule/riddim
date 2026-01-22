@@ -20,7 +20,7 @@ services:
     ports:
       - "4173:80"
     volumes:
-      - ../../deployment/config/web-config.compose.json:/usr/share/nginx/html/riddim/app/config.json:ro
+      - ../../deployment/config/web-config.compose.json:/usr/share/nginx/html/riddim/config.json:ro
     depends_on:
       - app-api
 

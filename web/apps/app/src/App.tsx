@@ -12,28 +12,28 @@ export function App() {
   }, [])
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-14">
-      <header className="flex flex-col gap-4 card p-8">
-        <div className="pill w-fit">riddim • app</div>
-        <h1 className="text-4xl font-semibold text-[var(--riddim-text)]">Play with the DSL-backed sound engine</h1>
-        <p className="text-lg text-[var(--riddim-muted)] max-w-3xl">
-          React/Vite frontend with runtime config for the backend RPC. Deployed under <span className="mono">/riddim/app</span>,
-          sharing the Catppuccin palette used across docs.
+    <div className="app-shell">
+      <header className="hero">
+        <div className="pill">Under construction</div>
+        <h1 className="hero-title">RIDDIM Live Console</h1>
+        <p className="hero-subtitle">
+          This landing view is a polished mockup of the live-coding workspace. The real controls are still being wired, but
+          the layout and navigation are finalizing so you can follow along.
         </p>
-        <div className="flex gap-3 flex-wrap">
-          <a className="btn-primary" href="/riddim/antora/development/0.1/index.html">Docs</a>
-          <a className="btn-primary" href="/riddim/antora/user/0.1/index.html">User Guides</a>
-          <a className="btn-primary" href="/riddim/antora/ops/0.1/index.html">Ops Docs</a>
+        <div className="cta-row">
+          <a className="btn-primary" href="/riddim/docs/">Read the docs</a>
+          <a className="btn-secondary" href="/riddim/docs/antora/development/0.1/index.html">Developer guide</a>
+          <a className="btn-secondary" href="/riddim/docs/antora/user/0.1/index.html">User guide</a>
         </div>
       </header>
 
       <section className="mt-10 grid gap-6 md:grid-cols-3">
         <div className="card p-6">
-          <h3 className="text-xl font-semibold text-[var(--riddim-text)]">Runtime config</h3>
-          <p className="text-[var(--riddim-muted)]">
-            Loaded from <span className="mono">config.json</span> at runtime so environments can change without rebuild.
+          <h3 className="panel-title">Runtime config</h3>
+          <p className="muted mt-2">
+            Loaded from <span className="mono">config.json</span> so environments can change without rebuild.
           </p>
-          <div className="mt-3 text-sm mono text-[var(--riddim-text)] bg-[var(--riddim-panel)] border border-[var(--riddim-border)] rounded-lg p-3">
+          <div className="config-block mono mt-4">
             {config ? (
               <>
                 <div>apiBase: {config.apiBase}</div>
@@ -45,16 +45,61 @@ export function App() {
           </div>
         </div>
         <div className="card p-6">
-          <h3 className="text-xl font-semibold text-[var(--riddim-text)]">Base path</h3>
-          <p className="text-[var(--riddim-muted)]">
-            Built with Vite base <span className="mono">/riddim/app/</span> for GitHub Pages and served via nginx in Compose.
+          <h3 className="panel-title">Base path</h3>
+          <p className="muted mt-2">
+            Built with Vite base <span className="mono">/riddim/</span> for GitHub Pages and served via nginx in Compose.
           </p>
         </div>
         <div className="card p-6">
-          <h3 className="text-xl font-semibold text-[var(--riddim-text)]">Theme</h3>
-          <p className="text-[var(--riddim-muted)]">
-            Catppuccin Mocha/Frappe tokens, JetBrains Mono for code, shared palette with docs and hub.
+          <h3 className="panel-title">Theme alignment</h3>
+          <p className="muted mt-2">
+            Catppuccin palette, Space Grotesk typography, and shared UI tones with the docs platform.
           </p>
+        </div>
+      </section>
+
+      <section className="mt-10 mock-grid">
+        <div className="card mock-panel">
+          <div className="transport">
+            <button type="button">Play</button>
+            <button type="button">Stop</button>
+            <button type="button">Record</button>
+            <div className="indicator mono">120 BPM · 4/4</div>
+          </div>
+          <div className="track-list">
+            <div className="track">
+              <span className="mono">Kick</span>
+              <div className="track-bar" />
+            </div>
+            <div className="track">
+              <span className="mono">Snare</span>
+              <div className="track-bar" />
+            </div>
+            <div className="track">
+              <span className="mono">Hi-hat</span>
+              <div className="track-bar" />
+            </div>
+          </div>
+        </div>
+        <div className="card mock-panel">
+          <h3 className="panel-title">Session timeline</h3>
+          <p className="muted">
+            Snapshots, loop markers, and event density will render here. The preview below mirrors the final layout.
+          </p>
+          <div className="track-list">
+            <div className="track">
+              <span className="mono">Scene A</span>
+              <div className="track-bar" />
+            </div>
+            <div className="track">
+              <span className="mono">Scene B</span>
+              <div className="track-bar" />
+            </div>
+            <div className="track">
+              <span className="mono">Scene C</span>
+              <div className="track-bar" />
+            </div>
+          </div>
         </div>
       </section>
     </div>

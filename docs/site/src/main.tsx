@@ -4,7 +4,7 @@ import '../../theme/theme.css'
 import './style.css'
 
 const links = [
-  { title: 'App', href: '/app/index.html', blurb: 'React/Vite runtime-configurable frontend deployed under /riddim/app.' },
+  { title: 'App', href: '/riddim/', absolute: true, blurb: 'React/Vite runtime-configurable frontend deployed at /riddim.' },
   { title: 'Development', href: '/antora/development/0.1/index.html', blurb: 'Architecture, DSL, scheduler, build/run instructions.' },
   { title: 'User', href: '/antora/user/0.1/index.html', blurb: 'How to trigger sounds and run the API without deep internals.' },
   { title: 'Ops', href: '/antora/ops/0.1/index.html', blurb: 'Deployment, env config, and monitoring entry points.' }
@@ -23,7 +23,7 @@ function App() {
         <p className="lede">Explore development, user, and ops guides. Antora outputs are bundled below.</p>
         <div className="actions">
           {links.map((link) => (
-            <a key={link.title} className="btn" href={`${base}${link.href}`}>
+            <a key={link.title} className="btn" href={link.absolute ? link.href : `${base}${link.href}`}>
               {link.title}
             </a>
           ))}
@@ -36,7 +36,7 @@ function App() {
             <li key={link.title}>
               <h3>{link.title}</h3>
               <p>{link.blurb}</p>
-              <a href={`${base}${link.href}`}>Open {link.title} docs →</a>
+              <a href={link.absolute ? link.href : `${base}${link.href}`}>Open {link.title} docs →</a>
             </li>
           ))}
         </ul>

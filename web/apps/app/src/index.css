@@ -5,47 +5,181 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(166, 227, 161, 0.06), transparent 32%),
-    radial-gradient(circle at 78% 5%, rgba(137, 220, 235, 0.08), transparent 30%),
-    var(--riddim-bg);
+  background: linear-gradient(180deg, var(--riddim-bg) 0%, var(--riddim-panel) 100%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   color: var(--riddim-text);
   min-height: 100vh;
 }
 
-.pill {
-  background: rgba(166, 227, 161, 0.12);
-  border: 1px solid var(--riddim-border);
-  border-radius: 999px;
-  padding: 6px 12px;
-  color: var(--riddim-accent);
-  font-weight: 600;
+.app-shell {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 56px 24px 120px;
 }
 
-.card {
-  background: linear-gradient(135deg, rgba(166, 227, 161, 0.08), rgba(137, 220, 235, 0.06)), var(--riddim-panel);
+.pill {
+  background: rgba(137, 220, 235, 0.16);
   border: 1px solid var(--riddim-border);
-  border-radius: 16px;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  border-radius: 999px;
+  color: var(--riddim-accent-2);
+  display: inline-flex;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  padding: 6px 14px;
+  text-transform: uppercase;
+}
+
+.hero {
+  background: linear-gradient(135deg, rgba(137, 220, 235, 0.14), rgba(137, 180, 250, 0.08)), var(--riddim-panel);
+  border: 1px solid var(--riddim-border);
+  border-radius: 24px;
+  box-shadow: 0 32px 80px rgba(24, 24, 37, 0.18);
+  display: grid;
+  gap: 18px;
+  padding: 32px 36px;
+}
+
+.hero-title {
+  font-size: clamp(2.2rem, 3.2vw, 3.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  color: var(--riddim-muted);
+  font-size: 1.1rem;
+  max-width: 620px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  padding: 12px 18px;
+  text-decoration: none;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--riddim-accent), var(--riddim-accent-2));
   color: #0b0c10;
-  border: none;
-  border-radius: 12px;
-  padding: 12px 18px;
-  font-weight: 700;
-  text-decoration: none;
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  box-shadow: 0 12px 30px rgba(166, 227, 161, 0.35);
+  box-shadow: 0 16px 36px rgba(30, 102, 245, 0.25);
 }
 
 .btn-primary:hover {
   filter: brightness(1.05);
 }
 
+.btn-secondary {
+  background: rgba(137, 220, 235, 0.16);
+  border: 1px solid rgba(137, 220, 235, 0.4);
+  color: var(--riddim-text);
+}
+
+.btn-secondary:hover {
+  background: rgba(137, 220, 235, 0.24);
+}
+
+.card {
+  background: var(--riddim-panel);
+  border: 1px solid var(--riddim-border);
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(24, 24, 37, 0.12);
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.muted {
+  color: var(--riddim-muted);
+}
+
 .mono {
   font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+.mock-grid {
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 960px) {
+  .mock-grid {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.mock-panel {
+  display: grid;
+  gap: 16px;
+  padding: 18px;
+}
+
+.transport {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.transport button {
+  background: rgba(137, 220, 235, 0.2);
+  border: 1px solid rgba(137, 220, 235, 0.4);
+  border-radius: 10px;
+  color: var(--riddim-text);
+  font-weight: 600;
+  padding: 8px 12px;
+}
+
+.transport .indicator {
+  background: rgba(137, 180, 250, 0.12);
+  border: 1px solid rgba(137, 180, 250, 0.4);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.track-list {
+  display: grid;
+  gap: 10px;
+}
+
+.track {
+  align-items: center;
+  background: rgba(137, 220, 235, 0.08);
+  border: 1px solid rgba(137, 220, 235, 0.24);
+  border-radius: 12px;
+  display: grid;
+  gap: 6px;
+  grid-template-columns: 110px 1fr;
+  padding: 10px 12px;
+}
+
+.track span {
+  font-size: 0.9rem;
+}
+
+.track-bar {
+  background: linear-gradient(90deg, rgba(137, 180, 250, 0.6), rgba(116, 199, 236, 0.2));
+  border-radius: 999px;
+  height: 8px;
+}
+
+.config-block {
+  background: rgba(17, 17, 27, 0.05);
+  border: 1px solid var(--riddim-border);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  padding: 12px;
 }

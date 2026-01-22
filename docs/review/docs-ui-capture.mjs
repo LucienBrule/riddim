@@ -18,7 +18,7 @@ if (!Array.isArray(config.viewports) || config.viewports.length === 0) {
 
 const baseUrl = config.baseUrl?.trim()
   ? config.baseUrl.trim().replace(/\/$/, '')
-  : pathToFileURL(path.join(docsRoot, 'site', 'dist', 'antora')).href.replace(/\/$/, '');
+  : pathToFileURL(path.join(docsRoot, 'site', 'dist', 'docs', 'antora')).href.replace(/\/$/, '');
 
 const dateStamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
 const outputDir = path.join(docsRoot, 'screenshots', 'docs-ui', dateStamp);

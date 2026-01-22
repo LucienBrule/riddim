@@ -6,7 +6,7 @@ AUDIT_ME: Implementation stub for future OAuth/RBAC work.
 ====
 
 ## Goals
-- Allow the SPA hosted on GitHub Pages (`/riddim/app`) to authenticate via OAuth/OIDC (GitHub primary).
+- Allow the SPA hosted on GitHub Pages (`/riddim/`) to authenticate via OAuth/OIDC (GitHub primary).
 - Backend (Quarkus) validates tokens and enforces RBAC (lockdown vs open enrollment).
 - Keep secrets out of the SPA; rely on PKCE and backend validation.
 
