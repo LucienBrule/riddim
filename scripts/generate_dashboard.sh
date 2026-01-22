@@ -39,6 +39,31 @@ else
     echo "| \`app-api\` (runner) | \`$runner_path\` | ❌ MISSING | - | - |" >> $OUTPUT_FILE
 fi
 
+# Web & Docs Artifacts
+echo "" >> $OUTPUT_FILE
+echo "## Web & Docs Artifacts" >> $OUTPUT_FILE
+echo "" >> $OUTPUT_FILE
+echo "| Component | Artifact | Status | Size | Last Modified |" >> $OUTPUT_FILE
+echo "|-----------|----------|--------|------|---------------|" >> $OUTPUT_FILE
+
+static_assets=(
+    "Web App:web/apps/app/dist"
+    "Docs Site:docs/build/docs-site"
+    "Docs Shell:docs/site/dist"
+)
+
+for asset in "${static_assets[@]}"; do
+    name="${asset%%:*}"
+    path="${asset#*:}"
+    if [ -d "$path" ] || [ -f "$path" ]; then
+        size=$(du -sh "$path" | cut -f1)
+        modified=$(date -r "$path" +"%Y-%m-%d %H:%M")
+        echo "| $name | \`$path\` | ✅ OK | $size | $modified |" >> $OUTPUT_FILE
+    else
+        echo "| $name | \`$path\` | ❌ MISSING | - | - |" >> $OUTPUT_FILE
+    fi
+done
+
 # Docker Images
 echo "" >> $OUTPUT_FILE
 echo "## Docker Images" >> $OUTPUT_FILE
@@ -46,7 +71,7 @@ echo "" >> $OUTPUT_FILE
 echo "| Image Name | Status | Created | Size |" >> $OUTPUT_FILE
 echo "|------------|--------|---------|------|" >> $OUTPUT_FILE
 
-docker_images=("riddim-app-api:latest")
+docker_images=("riddim-app-api:latest" "riddim-web:latest")
 
 for img in "${docker_images[@]}"; do
     if docker image inspect "$img" > /dev/null 2>&1; then

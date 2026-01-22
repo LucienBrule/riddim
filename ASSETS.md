@@ -46,6 +46,12 @@ Example encoded message for `/dirt/play "kick"`:
 
 - [x] Comprehensive `.gitignore` implemented
 
+## Phase 10 Deliverables
+
+- [x] Root Gradle orchestration (`verifyAll`, `ci`)
+- [x] Internal CI script plugin (`riddim.ci-orchestration`)
+- [x] Consolidated asset dashboard task (`assetsDashboard`)
+
 ## Module Artifacts
 
 See [ASSETS_DASHBOARD.md](ASSETS_DASHBOARD.md) for the live build matrix and artifact details.

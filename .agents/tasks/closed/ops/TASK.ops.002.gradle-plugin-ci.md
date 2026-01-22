@@ -29,12 +29,17 @@ Create a lightweight internal Gradle plugin to register and configure CI orchest
 - Plugin is applied only at root and does not alter module build logic.
 
 ## Recon
-- <Fill during implementation: plugin package, task wiring, skip flags.>
+- Scaffolder `buildSrc` with Kotlin DSL support.
+- Implemented orchestration as a precompiled script plugin (`riddim.ci-orchestration.gradle.kts`).
+- Configured JVM toolchain (17) in `buildSrc` to match the rest of the project and avoid compatibility issues with the environment's Java 24.
+- Verified task discoverability and execution via `./gradlew tasks`.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-21 20:42 (local)
+- Branch: `epic/gradle-ci-orchestration`
 - Summary:
-  - <1–3 bullets.>
+  - CI orchestration logic is now encapsulated in a reusable Gradle plugin.
+  - Root `build.gradle.kts` is kept clean, only applying the plugin.
+  - `ci` task added as a developer-friendly alias for full verification.

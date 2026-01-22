@@ -35,12 +35,17 @@ Expose all onboarding, build, test, and deployment workflows through root Gradle
 - Optional tool-dependent steps can be skipped via flags.
 
 ## Recon
-- <Fill during implementation: command mapping and skip flag decisions.>
+- Mapped NPM and Makefile commands to Gradle `Exec` tasks.
+- Applied `base` plugin to root project to enable standard lifecycle tasks (`build`, `check`).
+- Implemented `verifyAll` as a root aggregator task.
+- Property-based skip flags (`skipDocker`, `skipDocs`, `skipWeb`) implemented using `project.hasProperty`.
 
 ---
 
 ## Closure
-- Completed: YYYY-MM-DD HH:MM (local)
-- Branch: `<optional>`
+- Completed: 2026-01-21 20:35 (local)
+- Branch: `epic/gradle-ci-orchestration`
 - Summary:
-  - <1–3 bullets.>
+  - Root Gradle tasks now wrap all onboarding and deployment workflows.
+  - `verifyAll` provides a single entry point for full repo verification.
+  - Skip flags allow CI to bypass heavy toolchains when needed.

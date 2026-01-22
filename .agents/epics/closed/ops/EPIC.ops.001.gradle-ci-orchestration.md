@@ -2,7 +2,7 @@
 
 Namespace: `ops`  
 Slug: `gradle-ci-orchestration`  
-Status: open
+Status: closed
 
 ## Objective
 Centralize all repo workflows under the Gradle task graph so CI and developers can execute every build, test, and deploy action from the root.

@@ -56,3 +56,8 @@ Bootstrap the `riddim/` workspace as a clean, build-green Kotlin/Quarkus multi-m
 - [x] TASK.docs.005.cta-edit-pills-codeblocks: CTA/edit labels, pills, code framing, HRs
 - [x] TASK.docs.006.header-bg-spacing: Header/background/TOC/nav spacing and contrast
 - [x] TASK.docs.007.version-picker-border: Resolve ghost border on version selector
+
+## Phase 10 — CI Orchestration (EPIC.ops.001.gradle-ci-orchestration)
+
+- [x] TASK.ops.001.gradle-task-graph: Root Gradle orchestration tasks
+- [x] TASK.ops.002.gradle-plugin-ci: Lightweight internal Gradle plugin
