@@ -10,8 +10,8 @@
 
 body {
   margin: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(74, 222, 128, 0.05), transparent 30%),
-              radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.06), transparent 28%),
+  background: radial-gradient(circle at 20% 20%, rgba(30, 102, 245, 0.06), transparent 30%),
+              radial-gradient(circle at 80% 0%, rgba(4, 165, 229, 0.08), transparent 28%),
               var(--riddim-bg);
   color: var(--riddim-text);
   font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -24,7 +24,7 @@ body {
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(74, 222, 128, 0.12), rgba(14, 165, 233, 0.08));
+  background: linear-gradient(135deg, rgba(30, 102, 245, 0.14), rgba(116, 199, 236, 0.08));
   border: 1px solid var(--riddim-border);
   border-radius: 16px;
   padding: 32px;
@@ -62,7 +62,7 @@ body {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  box-shadow: 0 10px 30px rgba(74, 222, 128, 0.25);
+  box-shadow: 0 10px 30px rgba(30, 102, 245, 0.25);
 }
 
 .section {
