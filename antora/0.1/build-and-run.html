@@ -145,7 +145,20 @@
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew build
-./gradlew test</code></pre>
+./gradlew test
+./gradlew verifyAll # Run all build/test/web/docs/docker checks
+./gradlew ci        # Alias for verifyAll</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_web_docs"><a class="anchor" href="#_web_docs"></a>Web &amp; Docs</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew webBuild
+./gradlew docsBuild</code></pre>
 </div>
 </div>
 </div>
@@ -161,26 +174,21 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_makefile_shortcuts"><a class="anchor" href="#_makefile_shortcuts"></a>Makefile shortcuts</h2>
-<div class="sectionbody">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">make build
-make test
-make dev</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_docker"><a class="anchor" href="#_docker"></a>Docker</h2>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">make docker-build
-make docker-up
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew dockerBuild</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_docker_compose_runtime"><a class="anchor" href="#_docker_compose_runtime"></a>Docker Compose (Runtime)</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">make docker-up
 make docker-ps
 make docker-down</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -190,7 +198,7 @@ make docker-down</code></pre>
 <div class="sectionbody">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./scripts/generate_dashboard.sh</code></pre>
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">./gradlew assetsDashboard</code></pre>
 </div>
 </div>
 </div>
